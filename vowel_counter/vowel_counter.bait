@@ -1,4 +1,4 @@
-package main
+package vowel_counter
 
 const VOWEL_STR = 'aeiou'
 
@@ -11,8 +11,4 @@ fun vowel_count(s_ string) i32 {
 		}
 	}
 	return count
-}
-
-fun main(){
-	println(vowel_count('Lorem Ipsum').str())
 }
