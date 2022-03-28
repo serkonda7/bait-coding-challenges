@@ -1,0 +1,11 @@
+package vowel_counter
+
+fun test_vowel_count(){
+	strings := ['bait', 'Programming', 'LOREM IPSUM', 'Hello World!', '', '   ']
+	counts := [2, 3, 4, 3, 0, 0]
+	for i := 0; i < strings.len; i += 1 {
+		res := vowel_count(strings[i])
+		expected := counts[i]
+		assert res == expected
+	}
+}

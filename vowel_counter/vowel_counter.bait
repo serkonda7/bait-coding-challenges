@@ -1,0 +1,14 @@
+package vowel_counter
+
+const VOWEL_STR = 'aeiou'
+
+fun vowel_count(s_ string) i32 {
+	s := s_.to_lower()
+	count := 0
+	for i := 0; i < s.len; i += 1{
+		if VOWEL_STR.contains(s[i].ascii_str()){
+			count+=1
+		}
+	}
+	return count
+}
