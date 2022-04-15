@@ -1,0 +1,13 @@
+// This file is part of: bait-coding-challenges.
+// Copyright (c) 2022 Lukas Neubert.
+// Use of this code is governed by an MIT License (see LICENSE.md).
+package binary_string
+
+fun is_binary_string(str string) bool {
+	if str.len == 0 {
+		return false
+	}
+	zeros := str.count('0')
+	ones := str.count('1')
+	return zeros + ones == str.len
+}
