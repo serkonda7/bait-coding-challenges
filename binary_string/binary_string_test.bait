@@ -1,0 +1,18 @@
+// This file is part of: bait-coding-challenges.
+// Copyright (c) 2022 Lukas Neubert.
+// Use of this code is governed by an MIT License (see LICENSE.md).
+package binary_string
+
+fun test_valid_strings() {
+	inputs := ['101011', '000', '111']
+	for i :=0;i<inputs.len;i+=1 {
+		assert is_binary_string(inputs[i])
+	}
+}
+
+fun test_invalid_strings() {
+	inputs := ['01 01', '', ' ', 'hello', '123']
+	for i :=0;i<inputs.len;i+=1 {
+		assert not is_binary_string(inputs[i])
+	}
+}
