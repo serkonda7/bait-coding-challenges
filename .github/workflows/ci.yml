@@ -11,15 +11,13 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Install deps
-        uses: vlang/setup-v@v1
+      - uses: vlang/setup-v@v1
         with:
           check-latest: true
-      - name: Install bait
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         with:
           repository: tiabeast/bait
-      - name: Build bait
+      - name: Build baitv
         run: v -o bait cmd/main.v
       - uses: actions/checkout@v2
         with:
@@ -27,4 +25,4 @@ jobs:
       - name: Run tests
         run: |
           cd bait-coding-challenges
-          ../bait test vowel_counter
+          ../bait test .
